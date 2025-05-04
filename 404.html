@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      const segment = 1;
+      const l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        '/aiframs-app/#' +
+        l.pathname.split('/').slice(1 + segment).join('/').replace(/^\//, '') +
+        l.search + l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
